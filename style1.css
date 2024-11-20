@@ -1,0 +1,101 @@
+body{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #4335A7 ;
+    background-image: url('img/Manga1.jpg');
+    background-size: cover;
+    background-position-y: 100px;
+}
+#wapper{
+    max-width: 1200px;
+    margin: 0px auto;
+}
+.container{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    background-color: rgb(128, 196, 233);
+}
+.logo{
+    width: 50px;
+    height: 100px;
+}
+.logo img{
+    height: 100%;
+    border-radius: 50%;
+}
+#mainmenu{
+    padding: 0;
+    margin: 0;
+    margin-top: calc(100px / 2 - 19px);
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+#mainmenu li{
+    width: 100px;
+    text-align: center;
+}
+#mainmenu li a{
+    border-radius: 5px;
+    min-width: 45px;
+    background-color:rgb(255, 246, 233) ;
+    color: rgb(255, 127, 62);
+    display: block;
+    padding: 5px 2px;
+    margin: 1px 0px;
+    text-decoration: none;
+}
+#mainmenu ul.submenu{
+    list-style: none;
+    display: none;
+}
+#mainmenu li:hover>div>ul.submenu{ 
+    display: block;
+}
+ul.submenu:hover{
+    display:block;
+}
+.hass{
+    position: relative;
+}
+.hass :first-child>i{
+    position: absolute;
+    top: 7px;
+    right: 10px;
+}
+.hass .fa-solid {
+    color: brown;
+}
+/* #mainmenu>li.hass::after{
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font: var(--fa-font-solid);
+    content: '\f107';
+    position: absolute;
+    color: rgb(241, 199, 241);
+    right: 0px;
+    top:0px;
+    padding: 10px 0px;
+} */
+
+/* #mainmenu ul.submenu li.hass::after{
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font: var(--fa-font-solid);
+    content: '\f105';
+    position: absolute;
+    color: rgb(241, 199, 241);
+    right: 0px;
+    top:0px;
+    padding: 5px 0px;
+} */
+

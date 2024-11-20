@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DROP menu</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="grid.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style1.css" />
+  </head>
+  <body>
+    <div id="wapper">
+      <div id="header">
+        <nav class="container">
+          <div class="col c-4 logo">
+            <a href="" id="link-logo">
+              <img id="img-logo" src="img/logo.jpg" alt="" />
+            </a>
+          </div>
+          <div class="col c-8">
+            <ul id="mainmenu">
+              <li><a href="">About</a></li>
+              <li>
+                <div>
+                  <a href="">HTML</a>
+                </div>
+                <div>
+                  <ul class="submenu">
+                    <li><a href="">ABC.1</a></li>
+                    <li>
+                      <div>
+                        <a href="">ABC.2</a>
+                      </div>
+                      <div>
+                        <ul class="submenu">
+                          <li><a href="">DEF.1</a></li>
+                          <li><a href="">DEF.2</a></li>
+                          <li><a href="">DEF.3</a></li>
+                          <li>
+                            <div>
+                              <a href="">DEF.4</a>
+                            </div>
+                            <div>
+                              <ul class="submenu">
+                                <li><a href="">GHI.1</a></li>
+                                <li><a href="">GHI.2</a></li>
+                                <li><a href="">GHI.3</a></li>
+                                <li><a href="">GHI.4</a></li>
+                                <li><a href="">GHI.5</a></li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li><a href="">DEF.5</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li><a href="">ABC.3</a></li>
+                    <li>
+                      <div>
+                        <a href="">ABC.4</a>
+                      </div>
+                      <div>
+                        <ul class="submenu">
+                          <li><a href="">MENU.1</a></li>
+                          <li><a href="">MENU.2</a></li>
+                          <li><a href="">MENU.3</a></li>
+                          <li><a href="">MENU.4</a></li>
+                          <li><a href="">MENU.5</a></li>
+                          <li><a href="">MENU.6</a></li>
+                          <li><a href="">MENU.7</a></li>
+                          <li><a href="">MENU.8</a></li>
+                          <li><a href="">MENU.9</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li><a href="">ABC.5</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="">Css</a></li>
+              <li><a href="">PHP</a></li>
+              <li><a href="">Lavarel</a></li>
+              <li>
+                <div>
+                  <a href="">JS</a>
+                </div>
+                <div>
+                  <ul class="submenu">
+                    <li><a href="">ABC.1</a></li>
+                    <li><a href="">ABC.2</a></li>
+                    <li><a href="">ABC.3</a></li>
+                    <li><a href="">ABC.4</a></li>
+                    <li><a href="">ABC.5</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="">Bootstrap</a></li>
+              <li><a href="">Project</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const Childs = document.querySelectorAll(`.submenu`);
+        Childs.forEach(function (submenu) {
+          submenu.closest(`li`).classList.add("hass");
+        });
+        const Parents = document.querySelectorAll(`.hass`);
+        console.log(Parents)
+        Parents.forEach(function (parent) {
+          console.log(parent)
+          const icon = document.createElement("i"); 
+          icon.classList.add("fa-solid", "fa-angle-down"); 
+          parent.firstElementChild.append(icon);
+        });
+      });
+    </script>
+  </body>
+</html>

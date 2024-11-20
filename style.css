@@ -1,0 +1,127 @@
+body{
+    overflow-x: hidden;
+    background-color: rgb(228, 228, 228) ;
+}
+
+.container{
+    max-width: 960px;
+    margin: 0px auto;
+}
+
+#header{
+    background-color: blanchedalmond;
+    height: 100px;
+}
+
+#logo{
+    height: 80px;
+    padding: 10px 10px;
+}
+
+#logo img{
+    max-height: 50px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+}
+
+#mainmenu{
+    display: flex;
+    list-style: none;
+    padding: 15px ;
+    margin: 0;
+}
+
+#mainmenu li a{
+    min-width: 45px;
+    color: #f222f2f2;
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+#mainmenu li{
+    position: relative;
+}
+
+#mainmenu ul.submenu{
+    position: absolute;
+    background-color: rgb(138, 123, 123);
+    list-style: none;
+    padding: 5px 0;
+    display: none;
+}
+
+#mainmenu li:hover>ul.submenu{ 
+    display: block;
+}
+
+#mainmenu ul.submenu a{
+    padding: 3px 15px;
+    border-bottom: 1px solid;
+    color: white;
+    left: 0;
+}
+
+#mainmenu ul.submenu li:last-child a{
+    border: none;
+}
+
+#mainmenu ul.submenu ul.submenu{
+    left:70px;
+    top:-5px;
+}
+
+/* Boder cho thẻ */
+
+#mainmenu ul.submenu{
+    display: none;
+}
+
+#mainmenu>li>a{
+    position: relative;
+}
+
+#mainmenu>li>a::before{
+    content: "";
+    height: 4px;
+    width: 0;
+    background-color: red;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    transition: 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+#mainmenu>li:hover>a::before{
+    width: 100%;
+}
+
+#mainmenu>li.hass::after{
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font: var(--fa-font-solid);
+    content: '\f107';
+    position: absolute;
+    color: rgb(241, 199, 241);
+    right: 0px;
+    top:0px;
+    padding: 10px 0px;
+}
+
+#mainmenu ul.submenu li.hass::after{
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font: var(--fa-font-solid);
+    content: '\f105';
+    position: absolute;
+    color: rgb(241, 199, 241);
+    right: 0px;
+    top:0px;
+    padding: 5px 0px;
+}
