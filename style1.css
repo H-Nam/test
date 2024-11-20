@@ -71,7 +71,7 @@ ul.submenu:hover{
     right: 10px;
 }
 .hass .fa-solid {
-    color: brown;
+    color: rgb(221, 115, 115);
 }
 /* #mainmenu>li.hass::after{
     display: inline-block;
